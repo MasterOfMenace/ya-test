@@ -1,0 +1,3 @@
+{
+  "extends": ["eslint-config-masterofmenace/common", "eslint-config-masterofmenace/client"]
+}

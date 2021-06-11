@@ -1,0 +1,12 @@
+{
+  "extends": "ts-config-masterofmenace",
+  "compilerOptions": {
+    "outDir": "./public",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "jsx": "react",
+    "resolveJsonModule": true
+  },
+  "include": ["**/*", "../@types"],
+  "exclude": ["/node_modules"]
+}
