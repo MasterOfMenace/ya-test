@@ -1,19 +1,15 @@
-/*
-"cover_i": 258027, // обложка
-"title": "The Lord of the Rings", // название
-"author_name": [ //автор
-    "J. R. R. Tolkien"
-],
-"first_publish_year": 1954, //дата публикации
-"key": "OL27448W", // ключ для поиска в books api
-*/
-
-interface Book {
+interface BookSnippet {
   coverId: number;
+  coverEditionKey: string; // по этому ключу поиск в букс апи
   title: string;
   author: Array<string>;
-  firstPuplishYear: number;
-  key: string;
+}
+
+interface Book extends BookSnippet {
+  publishYear: number;
+  publisher: string;
+  isbn10: string;
+  isbn13: string;
 }
 
 type Action = {
