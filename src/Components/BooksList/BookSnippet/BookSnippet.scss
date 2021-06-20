@@ -1,0 +1,23 @@
+.book-snippet {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.book-snippet__title,
+.book-snippet__author {
+  margin: 0;
+}
+
+.book-snippet__cover-wrapper {
+  width: 40px;
+  min-width: 40px;
+  height: 60px;
+  background-color: #c5dde4;
+}
+
+.book-snippet__cover-image {
+  width: 40px;
+  height: 60px;
+}

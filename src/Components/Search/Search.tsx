@@ -1,4 +1,5 @@
 import React, { MutableRefObject, useRef } from "react";
+import "./Search.scss";
 
 interface SearchProps {
   onSeachButtonClickHandler: (title: string) => void;

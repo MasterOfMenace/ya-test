@@ -6,6 +6,7 @@ import { BooksList } from "./BooksList/BooksList";
 import { Container } from "./Container/Container";
 import { Modal } from "./Modal/Modal";
 import { Search } from "./Search/Search";
+import "../Styles/global.scss";
 
 export const App = () => {
   const dispatch = useDispatch();

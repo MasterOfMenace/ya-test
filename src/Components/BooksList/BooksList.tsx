@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { AppStore } from "src/Redux/rootReducer";
 import { BookSnippet } from "./BookSnippet/BookSnippet";
 import { Pagination } from "../Pagination/Pagination";
+import "./BooksList.scss";
 
 interface BooksListProps {
   books: Array<BookSnippet>;
@@ -28,9 +29,9 @@ export const BooksList = ({ books, onBookClickHandler, onChangePageHandler }: Bo
   return (
     <div className="books">
       <ul className="books__list">
-        {books.map((book) => (
+        {books.map((book, index) => (
           <li
-            key={book.coverEditionKey}
+            key={`book-snippet-${index}`}
             className="books__list-item"
             onClick={() => onBookClickHandler(book)}
           >
@@ -39,7 +40,7 @@ export const BooksList = ({ books, onBookClickHandler, onChangePageHandler }: Bo
         ))}
       </ul>
       <div className="books__pagination">
-        <Pagination currentPage={page} pagesCount={totalPages} onPageChangeHandler={onChangePage} />
+        <Pagination currentPage={page} pagesCount={251} onPageChangeHandler={onChangePage} />
       </div>
     </div>
   );
