@@ -1,14 +1,19 @@
-import React from "react";
+import React, { MutableRefObject, useRef } from "react";
 
 interface SearchProps {
-  onSeachButtonClickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onSeachButtonClickHandler: (title: string) => void;
 }
 
 export const Search = ({ onSeachButtonClickHandler }: SearchProps) => {
+  const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
+
   return (
     <div className="search">
-      <input type="text" className="search__input" />
-      <button className="button search__button" onClick={onSeachButtonClickHandler}>
+      <input type="text" className="search__input" ref={inputRef} />
+      <button
+        className="button search__button"
+        onClick={() => onSeachButtonClickHandler(inputRef.current.value)}
+      >
         Поиск
       </button>
     </div>

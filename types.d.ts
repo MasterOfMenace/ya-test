@@ -1,6 +1,8 @@
 interface BookSnippet {
-  coverId: number;
-  coverEditionKey: string; // по этому ключу поиск в букс апи
+  coverId?: number;
+  coverEditionKey?: string; // по этому ключу поиск в букс апи
+  editionKey: Array<string>;
+  editionCount: number;
   title: string;
   author: Array<string>;
 }

@@ -14,13 +14,20 @@ export const App = () => {
   const portalNode = document.getElementById("portal");
   const [showModal, setShowModal] = useState(false);
 
-  const onSearchClick = () => {
-    dispatch(Operation.getMockBooks());
+  const onSearchClick = (title: string) => {
+    console.log(title);
+    dispatch(Operation.getBooks({ title }));
   };
 
-  const onBookClick = () => {
-    dispatch(Operation.selectMockBook());
+  const onBookClick = (book: BookSnippet) => {
+    console.log(book);
+    dispatch(Operation.selectBook(book));
     setShowModal(true);
+  };
+
+  const onChangePage = (title: string, page: number) => {
+    console.log(page);
+    dispatch(Operation.changePage(title, page));
   };
 
   return (
@@ -28,7 +35,11 @@ export const App = () => {
       <div className="header"></div>
       <Container>
         <Search onSeachButtonClickHandler={onSearchClick} />
-        <BooksList books={books} onBookClickHandler={onBookClick} />
+        <BooksList
+          books={books}
+          onBookClickHandler={onBookClick}
+          onChangePageHandler={onChangePage}
+        />
       </Container>
       {showModal && portalNode && (
         <Modal domNode={portalNode}>
