@@ -1,3 +1,6 @@
 {
-  "extends": ["eslint-config-masterofmenace/common", "eslint-config-masterofmenace/client"]
+  "extends": ["eslint-config-masterofmenace/common", "eslint-config-masterofmenace/client"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 }

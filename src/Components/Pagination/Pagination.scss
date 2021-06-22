@@ -1,0 +1,16 @@
+.pagination {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__item {
+  cursor: pointer;
+  &--active {
+    border: 1px solid red;
+    color: red;
+  }
+}
