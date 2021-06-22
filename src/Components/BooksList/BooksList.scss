@@ -1,12 +1,16 @@
 .books {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
+  height: 80%;
+  overflow: scroll;
+  padding-top: 10px;
 }
 
 .books__list {
+  width: 80%;
+  margin: 0 auto;
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin: 0;
   padding: 0;
 }

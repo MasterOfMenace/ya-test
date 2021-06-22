@@ -10,4 +10,11 @@ img {
 .page {
   background-color: #e6f1f3;
   padding-top: 20px;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
 }

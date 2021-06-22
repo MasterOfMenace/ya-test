@@ -1,0 +1,22 @@
+.book-extended {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.book-extended__cover-wrapper {
+  margin: auto;
+}
+
+.book-extended__description-wrapper {
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+}

@@ -43,7 +43,7 @@ export const App = () => {
         />
       </Container>
       {showModal && portalNode && (
-        <Modal domNode={portalNode}>
+        <Modal domNode={portalNode} onCloseHandler={() => setShowModal(false)}>
           <BookExtended book={selectedBook} />
         </Modal>
       )}
