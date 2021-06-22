@@ -1,20 +1,17 @@
-import React, { MutableRefObject, useRef } from "react";
+import React, { ChangeEvent } from "react";
 import "./Search.scss";
 
 interface SearchProps {
-  onSeachButtonClickHandler: (title: string) => void;
+  value: string;
+  onSeachButtonClickHandler: () => void;
+  onValueChangeHandler: (evt: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Search = ({ onSeachButtonClickHandler }: SearchProps) => {
-  const inputRef = useRef() as MutableRefObject<HTMLInputElement>;
-
+export const Search = ({ value, onSeachButtonClickHandler, onValueChangeHandler }: SearchProps) => {
   return (
     <div className="search">
-      <input type="text" className="search__input" ref={inputRef} />
-      <button
-        className="button search__button"
-        onClick={() => onSeachButtonClickHandler(inputRef.current.value)}
-      >
+      <input type="text" className="search__input" value={value} onChange={onValueChangeHandler} />
+      <button className="button search__button" onClick={() => onSeachButtonClickHandler()}>
         Поиск
       </button>
     </div>
